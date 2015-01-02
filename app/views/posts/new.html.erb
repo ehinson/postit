@@ -1,18 +1,18 @@
 <%= render 'shared/content_title', title: 'Create a New Post' %>
 
 <div class='well'>
-  <%= form_for @post do |f|  %>
-    <div clas='control-group'>
+  <%= form_for(@post) do |f|  %>
+    <div class='control-group'>
       <%= f.label :title  %>
       <%= f.text_field :title  %>
     </div>
 
-    <div clas='control-group'>
+    <div class='control-group'>
       <%= f.label :url  %>
       <%= f.text_field :url  %>
     </div>
 
-    <div clas='control-group'>
+    <div class='control-group'>
       <%= f.label :description  %>
       <%= f.text_area :description , rows:10 %>
     </div>
