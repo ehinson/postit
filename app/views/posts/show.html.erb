@@ -32,6 +32,8 @@
 
 <% @post.comments.each do |comment|  %>
   <div class ="well span8">
-    <em>"<%= comment.body  %>"</em>
+    <em>"<%= comment.body  %>"</em><br>
+    <span class ="quiet">posted by</span> <%= comment.creator.username %>
+      <small>at <%= comment.created_at  %></small></p>
   </div>
 <%  end  %>
