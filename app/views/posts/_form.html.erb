@@ -34,6 +34,7 @@
         <%  cb.label(class: "checkbox inline") { cb.check_box(class: "checkbox") + cb.text}  %>
       <%  end  %>
     </div>
+
     <%= f.submit(@post.new_record? ? 'Create Post' : 'Update Post', class: 'btn btn-primary')  %>
   <%  end  %>
 </div>
