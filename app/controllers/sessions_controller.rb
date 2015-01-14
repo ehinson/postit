@@ -12,14 +12,14 @@ class SessionsController < ApplicationController
         flash[:notice] = "Welcome, you've logged in"
         redirect_to root_path
     else
-      flash[:error] = "There was something wrong."
+      flash[:error] = "There is something wrong with your username or password"
       redirect_to login_path
     end
   end
 
   def destroy
     session[:user_id] = nil
-    flash[:notice] = "You have logged out"
+    flash[:notice] = "Goodbye! You have logged out."
     redirect_to root_path
   end
 end
