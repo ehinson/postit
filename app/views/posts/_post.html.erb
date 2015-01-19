@@ -4,7 +4,7 @@
       <i class= "icon-arrow-up"></i>
       <%  end  %>
       <br>
-      <span id="post_<%=post.id %>_votes"><%= post.total_votes  %></span>
+      <span id="post_<%=post.slugs %>_votes"><%= post.total_votes  %></span>
       <%  if post.total_votes.abs <= 1  %>
       vote
       <%  else  %>
