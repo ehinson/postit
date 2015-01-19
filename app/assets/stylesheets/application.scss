@@ -14,21 +14,45 @@
 
  @import "bootstrap";
 
+ a {
+   color: #36802D;
+ }
+
  .container {
   margin-left: 135px
 }
 
 .navbar .nav > li > a.brand {
   padding-left: 0px;
+  color: rgba(255,255,255,.8);
+  font-weight: 800;
+  font-size: 100px;
 }
 
+.navbar {
+  background: url("/assets/dino-cute.png") no-repeat;
+  background-color: green;
+}
+
+.navbar .nav {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 10px 135px;
+}
+
+
 .quiet {
-  color: #ababab;
+  color: #77AB59;
 }
 
 div.nav_item {
   margin-left: 25px;
-  float: left;
+  width: 150px;
+  border-left: 5px #F0F7DA solid;
+}
+
+div.nav_item.pull-left {
+  margin-left: -135px;
 }
 
 .label, .badge {
@@ -41,4 +65,135 @@ div.nav_item {
 div.comment_votes {
   padding: 10px;
 }
+.navbar .btn {
+  background: none !important;
+  border-radius: 0px !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: none;
+  font-weight: 100;
+  letter-spacing: .8px;
 
+}
+
+a.btn {
+  width: 100%;
+}
+
+.navbar .btn, .navbar .btn-group {
+  margin-top:0;
+}
+
+.caret {
+  border-top: 4px solid white;
+}
+.navbar-inner {
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  min-height: 200px;
+  position: relative;
+}
+
+.dropdown-menu {
+  border-radius: 2px;
+  background-color: rgba(255,255,255,.8);
+  position: absolute;
+  top: 100%;
+  left: -5px;
+  right: 0;
+  border: none;
+  border-bottom: 1px white solid;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  width: 180px;
+}
+.dropdown-menu li a {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.dropdown-menu li:first-child {
+  border-left: 5px solid #234D20;
+}
+
+.dropdown-menu li a:hover {
+  background: white;
+  color: #234D20;
+  text-shadow: none;
+}
+
+.dropdown-menu li a:hover i {
+  color: #234D20;
+}
+
+.dropdown-menu li:nth-child(2) {
+  border-left: 5px solid #36802D;
+}
+
+.dropdown-menu li:nth-child(3) {
+  border-left: 5px solid #77AB59;
+}
+
+.dropdown-menu li:nth-child(4) {
+  border-left: 5px solid #C9DF8A;
+}
+
+.dropdown-menu li:nth-child(5) {
+  border-left: 5px solid white;
+}
+
+
+.well {
+  border-radius: 0px;
+  border: none;
+  background: white;
+  border-top: 1px green solid;
+  box-shadow: none;
+}
+
+.well .span6,
+.well .span0 {
+}
+
+a.username{
+  color: hotpink;
+}
+
+
+hr {
+  border-color: #36802D; 
+}
+
+.nav-tabs li a:hover {
+  background-color: #F0F7DA;
+  border: none;
+}
+
+.badge {
+  background: none;
+  padding-right: 20px;
+  padding-left: 0;
+
+}
+
+.badge a {
+  color: hotpink;
+  text-shadow: none;
+}
+
+.badge a:hover {
+  color: green;
+}
+
+.square {
+  float: left;
+clear: left;
+width: 50px;
+height: 50px;
+border: 1px solid gray;
+margin: 20px
+}

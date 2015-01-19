@@ -15,12 +15,20 @@
       <i class= "icon-arrow-down"></i>
     <%  end  %>
   </div>
-  <div class = "span8 well">
+  <div class = "span10 well">
+    <div class="span6 pull-left">
     <%= render post.categories  %>
     <h4><%= link_to post.title, fix_url(post.url) %></h4>
     <p><%= post.description  %></p>
-    <p><span class ="quiet">posted by</span> <%= link_to post.creator.username, user_path(post.creator) %>
+  </div>
+  <div class="span3 pull-right">
+    <p><span class ="quiet">posted by</span> <%= link_to post.creator.username, user_path(post.creator), class: 'username' %>
       <small>at <%= display_datetime(post.created_at)  %></small></p>
-      <span> <%= link_to( "#{post.comments.size} comments", post_path(post))  %></span>
+      <span> <%= link_to post_path(post) do %>
+        
+        <i class="icon-comment"></i>
+        <%= post.comments.size %>
+        <%  end  %></span>
+      </div>
   </div>
   </div>

@@ -1,12 +1,8 @@
-<ul class="nav">
-  <li>
-    <%= link_to "Postit!", root_path, :class => 'brand' %>
-  </li>
 
-</ul>
-<div class='btn-group nav_item'>
+
+<div class='btn-group nav_item pull-right'>
   <%=  link_to "#", class: 'btn btn-small dropdown-toggle', 'data-toggle' => 'dropdown' do %>
-    Categories <span class='caret'></span>
+    <span class="pull-left">Categories</span> <span class='caret pull-right'></span>
   <%  end  %>
   <ul class='dropdown-menu'>
     <% Category.all.each do |category|  %>
@@ -28,13 +24,13 @@
 </div>
 
 <%  if logged_in?  %>
-  <div class='nav_item'>
+  <div class='nav_item pull-right'>
     <%=  link_to "New Post", new_post_path, class: 'btn btn-success btn-small'  %>
   </div>
-  <div class="btn-group nav_item">
+  <div class="btn-group nav_item pull-left">
       <%= link_to('#', class: 'btn btn-small dropdown-toggle', 'data-toggle'=> 'dropdown') do %>
-      <%= current_user.username  %>
-      <span class='caret'></span>
+      <span class="pull-left">Welcome, <%= current_user.username  %></span>
+      <span class='caret pull-right'></span>
       <%  end  %>
       <ul class="dropdown-menu">
         <li>
@@ -57,14 +53,12 @@
         </li>      
       </ul>
   </div>
-    <div class='nav_item'>
-    
-  </div>
+
 <%  else #logged out %>
- <div class='nav_item'>
+ <div class='nav_item pull-right'>
     <%=  link_to "Register", register_path, class: 'btn btn-success btn-small'  %>
   </div>
-  <div class='nav_item'>
+  <div class='nav_item pull-right'>
     <%=  link_to "Login", login_path, class: 'btn btn-success btn-small'  %>
   </div>
   <%  end  %>
